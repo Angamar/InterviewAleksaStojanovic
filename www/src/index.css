@@ -1,0 +1,91 @@
+#root {
+    margin-top: 50px;
+}
+
+.input-field label {
+    color: #3949ab;
+}
+
+.input-field input[type="text"]:focus + label {
+    color: #3949ab !important;
+}
+
+.input-field input[type="text"] + label {
+    color: black !important;
+}
+
+.input-field input[type="text"]:focus {
+    border-bottom: 1px solid #3949ab !important;
+    box-shadow: 0 1px 0 0 #3949ab !important;
+}
+
+.input-field input[type="text"] {
+    border-bottom: 0.5px solid black !important ;
+    box-shadow: 0 0.5px 0 0 gray !important;
+}
+
+header {
+    background-color: #3949ab;
+    color: white;
+}
+
+body {
+    background-color: #c5cae9;
+}
+
+.noTasksMessage {
+    text-align: center;
+    font-size: 30px;
+}
+
+.collection-item {
+    font-size: 18px;
+}
+
+.checkbox-item-checked {
+    color: black;
+}
+
+.container.App {
+    background-color: white;
+}
+
+.editButton,
+.updateButton,
+.cancelUpdateButton,
+.newTaskButton,
+.trashButton,
+.checkButton {
+    color: #3949ab;
+    cursor: pointer;
+}
+
+.newTaskButton {
+    border: none;
+    background-color: transparent !important;
+    padding: 0px 3px !important;
+}
+
+.editButton:hover,
+.updateButton:hover,
+.cancelUpdateButton:hover,
+.newTaskButton:hover,
+.trashButton:hover,
+.checkButton:hover {
+    color: #9fa8da;
+    cursor: pointer;
+}
+
+.edit-field {
+    margin: 0px !important;
+    height: 22px !important;
+}
+
+.update-input {
+    margin: 0px !important;
+    height: 22px !important;
+    width: 75% !important;
+}
+.checkButton {
+    margin-right: 10px;
+}

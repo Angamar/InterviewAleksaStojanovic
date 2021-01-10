@@ -1,0 +1,28 @@
+version: "3"
+
+services: 
+
+  todo-list-backend:
+    image: angamar/todo-list-api
+    build: 
+      context: ./api
+    ports:
+      - "5000:5000"
+    networks: 
+      - todo-list-app
+
+
+  todo-list-frontend:
+    image: angamar/todo-list-www
+    build: 
+      context: ./www
+    stdin_open: true
+    ports:
+      - "8080:80"
+    networks: 
+      - todo-list-app
+
+
+networks: 
+  todo-list-app:
+    driver: bridge
