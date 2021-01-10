@@ -39,38 +39,36 @@ const TaskLI = ({ thisTask, onTaskDelete, onTaskCheck, onTaskUpdate }) => {
                 }`}
             >
                 <div>
-                    <div>
-                        <label>
-                            <input
-                                type="checkbox"
-                                defaultChecked={thisTask.done ? "checked" : ""}
-                                checked={thisTask.done ? "checked" : ""}
-                                onClick={handleCheckboxClick}
-                                className={`secondary-content  `}
-                            />
-                            <span
-                                className={
-                                    thisTask.done
-                                        ? "checkbox-item-unchecked"
-                                        : "checkbox-item-checked"
-                                }
-                            >
-                                {thisTask.taskName}
-                            </span>
-                        </label>
+                    <label>
+                        <input
+                            type="checkbox"
+                            defaultChecked={thisTask.done ? "checked" : ""}
+                            checked={thisTask.done ? "checked" : ""}
+                            onClick={handleCheckboxClick}
+                            className={`secondary-content  `}
+                        />
+                        <span
+                            className={
+                                thisTask.done
+                                    ? "checkbox-item-unchecked"
+                                    : "checkbox-item-checked"
+                            }
+                        >
+                            {thisTask.taskName}
+                        </span>
+                    </label>
 
-                        <div
-                            onClick={handleEditButtonClick}
-                            className={`secondary-content`}
-                        >
-                            <i className="material-icons editButton">edit</i>
-                        </div>
-                        <div
-                            onClick={handleDeleteButtonClick}
-                            className={`secondary-content`}
-                        >
-                            <i className="material-icons trashButton">delete</i>
-                        </div>
+                    <div
+                        onClick={handleDeleteButtonClick}
+                        className={`secondary-content`}
+                    >
+                        <i className="material-icons trashButton">delete</i>
+                    </div>
+                    <div
+                        onClick={handleEditButtonClick}
+                        className={`secondary-content`}
+                    >
+                        <i className="material-icons editButton">edit</i>
                     </div>
                 </div>
             </li>
@@ -89,6 +87,7 @@ const TaskLI = ({ thisTask, onTaskDelete, onTaskCheck, onTaskUpdate }) => {
                         onSubmit={handleUpdateButtonClick}
                         type="text"
                         className="active  update-input"
+                        maxlength="50"
                     />
                     <div className="valign-wrapper right">
                         <div

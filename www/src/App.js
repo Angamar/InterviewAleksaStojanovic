@@ -1,5 +1,5 @@
-import "./App.css";
 import "materialize-css/dist/css/materialize.min.css";
+import "./App.css";
 import List from "./components/List";
 import NewTaskForm from "./components/NewTaskForm";
 import Header from "./components/header";
@@ -87,20 +87,26 @@ function App() {
         }
     };
     return (
-        <div className="App container">
-            <Header />
-            <div className="row">
-                <List
-                    tasks={tasks}
-                    onTaskDelete={handleTaskDelete}
-                    onTaskCheck={handleTaskCheck}
-                    onTaskUpdate={handleTaskUpdate}
-                />
+        <div>
+            <div className="App container">
+                <Header />
+                <div className="row tasks">
+                    <div className="col s12 m12 l8 offset-l2">
+                        <List
+                            tasks={tasks}
+                            onTaskDelete={handleTaskDelete}
+                            onTaskCheck={handleTaskCheck}
+                            onTaskUpdate={handleTaskUpdate}
+                        />
+                    </div>
+                </div>
+                <div className="row create">
+                    <div className="col s12 m12 l8 offset-l2">
+                        <NewTaskForm onNewTask={handleTaskCreate} />
+                    </div>
+                </div>
+                <Footer />
             </div>
-            <div className="row">
-                <NewTaskForm onNewTask={handleTaskCreate} />
-            </div>
-            <Footer />
         </div>
     );
 }
