@@ -23,8 +23,6 @@ function App() {
     //response.data: task
     const handleTaskCreate = (newTask) => {
         axios.post("/api/tasks", newTask).then((response) => {
-            console.log("Server has sent the response!");
-            console.log(response.data);
             setTasks([...tasks, response.data]);
         });
     };
@@ -33,12 +31,6 @@ function App() {
         axios
             .put(`/api/tasks/check/${thisTask._id}`, thisTask)
             .then((response) => {
-                console.log(
-                    "'" +
-                        response.data.taskName +
-                        "' is done: " +
-                        response.data.done
-                );
                 setTasks(
                     tasks.map((task) => {
                         if (task._id === response.data._id) {
@@ -54,16 +46,10 @@ function App() {
         axios
             .delete(`/api/tasks/${thisTask._id}`, thisTask)
             .then((response) => {
-                console.log(
-                    `Task '${response.data.taskName}' succesfully deleted!'`
-                );
                 setTasks(
                     tasks.filter((task) => task._id !== response.data._id)
                 );
             });
-
-        //FALSE (filters out)= vraca se za kliknuti element, jer njegov _id se poklapa, sto je suprotno od uslova
-        //TRUE (stays)== vraca se za sve ostale elemente, jer svi jesu razliciti od _id kliknutog elementa
     };
 
     //response.data: task
@@ -73,8 +59,6 @@ function App() {
             axios
                 .put(`/api/tasks/${thisTask._id}`, thisTask)
                 .then((response) => {
-                    console.log("Server has sent the response!");
-                    console.log(response.data.taskName);
                     setTasks(
                         tasks.map((task) => {
                             if (task._id === response.data._id) {

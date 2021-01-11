@@ -12,7 +12,7 @@
 }
 
 .input-field input[type="text"] + label {
-    color: black !important;
+    color: #212121 !important;
 }
 
 .input-field input[type="text"]:focus {
@@ -21,7 +21,7 @@
 }
 
 .input-field input[type="text"] {
-    border-bottom: 0.5px solid black !important ;
+    border-bottom: 0.5px solid #212121 !important ;
     box-shadow: 0 0.5px 0 0 gray !important;
 }
 
@@ -75,11 +75,14 @@ body {
 .editButton:hover,
 .updateButton:hover,
 .cancelUpdateButton:hover,
-.newTaskButton:hover,
 .trashButton:hover,
 .checkButton:hover {
     color: #9fa8da;
     cursor: pointer;
+}
+
+.newTaskButton:hover {
+    color: #1a237e;
 }
 
 .edit-field {

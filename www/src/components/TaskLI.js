@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import M from "materialize-css";
 
 const TaskLI = ({ thisTask, onTaskDelete, onTaskCheck, onTaskUpdate }) => {
@@ -87,7 +87,7 @@ const TaskLI = ({ thisTask, onTaskDelete, onTaskCheck, onTaskUpdate }) => {
                         onSubmit={handleUpdateButtonClick}
                         type="text"
                         className="active  update-input"
-                        maxlength="50"
+                        maxlength="65"
                     />
                     <div className="valign-wrapper right">
                         <div
